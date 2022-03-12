@@ -1,0 +1,129 @@
+@import '../../../sassStyles/mixins';
+@import '../../../sassStyles/variables';
+
+.nav {
+  @include responsiveMax($phone) {
+    padding: 2rem 4rem;
+  }
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  @include responsiveMax($table) {
+    display: none;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50rem;
+    font-size: 1.5rem;
+
+    & a {
+      text-decoration: none;
+      color: $grayishViolet;
+
+      &:hover {
+        color: $veryDarkViolet;
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+
+  & button {
+    font-size: 1.5rem;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__mobile {
+    padding: 2rem;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+    @include responsiveMax($table) {
+      display: flex;
+    }
+
+    & .hamburger-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 30px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.25s ease-out;
+      & span {
+        border: none;
+        border-top: 2px solid $grayishViolet;
+        transition: all 0.25s ease-out;
+      }
+
+      &.active {
+        transition: all 0.25s ease-out;
+        perspective: 10000000;
+        & span:nth-child(1) {
+          transform: rotate(40deg) translateY(4px);
+          transition: all 0.25s ease-out;
+        }
+        & span:nth-child(2) {
+          transform: rotate(-40deg) translateY(-10px);
+          transition: all 0.25s ease-out;
+        }
+        & span:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+
+    &-content {
+      position: absolute;
+      width: 70%;
+      height: 30rem;
+      top: 100%;
+      left: 50%;
+      transform: translateX(200%);
+      opacity: 0;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    &.active {
+      .nav__mobile-content {
+        transform: translateX(-50%);
+        transition: all 0.2s ease-out;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: $darkViolet;
+      }
+
+      .nav__mobile-content-line {
+        border: none;
+        border-top: 1px solid $gray;
+      }
+
+      .nav__mobile-group {
+        height: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        & a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.5rem;
+
+          &:hover {
+            transition: all 0.2s ease-out;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}

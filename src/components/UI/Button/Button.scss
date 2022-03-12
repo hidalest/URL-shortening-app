@@ -1,0 +1,29 @@
+@import '../../../sassStyles/variables';
+
+.button {
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $cyan;
+    color: white;
+    transition: all 0.15s ease-out;
+
+    &:hover {
+      background-color: rgba($color: $cyan, $alpha: 0.5);
+      transition: all 0.25s ease-out;
+    }
+  }
+  &.secondary {
+    background-color: transparent;
+    color: $grayishViolet;
+    transition: all 0.15s ease-out;
+    &:hover {
+      color: $veryDarkViolet;
+      transition: all 0.25s ease-out;
+    }
+  }
+}
