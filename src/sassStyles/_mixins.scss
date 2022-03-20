@@ -3,6 +3,7 @@ $phone: 480px;
 $table: 768px;
 $table-land: 1024px;
 $desktop: 1800px;
+$bigDesktop: 1920px;
 
 @mixin responsiveMax($breakpoint) {
   @media (max-width: ($breakpoint/16px*1em)) {

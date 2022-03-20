@@ -1,0 +1,79 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/mixins';
+
+.header {
+  @include responsiveMax($table-land) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  margin: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsiveMax($phone) {
+    margin: 0 1rem;
+  }
+
+  &__description {
+    @include responsiveMax($bigDesktop) {
+      width: 50vw;
+    }
+    width: 70vw;
+    @include responsiveMax($table-land) {
+      order: 1;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @include responsiveMax($table) {
+      width: auto;
+    }
+
+    & h1 {
+      font-size: 4vw;
+      color: $veryDarkBlue;
+      line-height: 5vw;
+      @include responsiveMax($table-land) {
+        font-size: 6vw;
+        line-height: normal;
+      }
+      @include responsiveMax($phone) {
+        font-size: 3rem;
+        line-height: normal;
+      }
+    }
+
+    & p {
+      font-size: 1.5rem;
+      width: 50rem;
+      color: $grayishViolet;
+      margin-bottom: 3rem;
+      @include responsiveMax($table-land) {
+        width: auto;
+      }
+      @include responsiveMax($phone) {
+        font-size: auto;
+      }
+    }
+  }
+
+  &__image {
+    width: 80rem;
+    @include responsiveMax($table-land) {
+      order: 0;
+      width: auto;
+    }
+    @include responsiveMax($phone) {
+      width: 40rem;
+      margin-bottom: 4rem;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

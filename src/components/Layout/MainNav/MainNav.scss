@@ -8,16 +8,20 @@
   display: flex;
   justify-content: space-between;
   padding: 4rem 6rem;
-  @include responsiveMax($table) {
+  @include responsiveMax($table-land) {
     display: none;
   }
 
   &__group {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 50rem;
     font-size: 1.5rem;
+
+    & > * {
+      margin-right: 2rem;
+    }
 
     & a {
       text-decoration: none;
@@ -43,8 +47,11 @@
     justify-content: space-between;
     position: relative;
     display: none;
-    @include responsiveMax($table) {
+    @include responsiveMax($table-land) {
       display: flex;
+    }
+    @include responsiveMax($phone) {
+      padding: 2rem 1rem;
     }
 
     & .hamburger-icon {
@@ -57,24 +64,24 @@
       cursor: pointer;
       transition: all 0.25s ease-out;
       & span {
-        border: none;
-        border-top: 2px solid $grayishViolet;
+        width: 30px;
+        height: 5px;
+        background-color: $grayishViolet;
         transition: all 0.25s ease-out;
       }
 
       &.active {
         transition: all 0.25s ease-out;
-        perspective: 10000000;
         & span:nth-child(1) {
-          transform: rotate(40deg) translateY(4px);
+          transform: rotate(-45deg) translate(-9px, 0px);
           transition: all 0.25s ease-out;
         }
         & span:nth-child(2) {
-          transform: rotate(-40deg) translateY(-10px);
-          transition: all 0.25s ease-out;
+          display: none;
         }
         & span:nth-child(3) {
-          display: none;
+          transform: rotate(45deg) translate(-8px, -1px);
+          transition: all 0.25s ease-out;
         }
       }
     }
