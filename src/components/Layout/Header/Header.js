@@ -12,7 +12,7 @@ const Header = (props) => {
           Build your brand's recognition and get detailed insights on how your
           links are performing
         </p>
-        <Button>Get Started</Button>
+        <Button buttonType={'primary'}>Get Started</Button>
       </div>
 
       <div className='header__image'>

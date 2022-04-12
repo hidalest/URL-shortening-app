@@ -2,8 +2,12 @@ import React from 'react';
 import './Button.scss';
 
 const Button = (props) => {
-  const { children, className, type } = props;
-  return <button className={`button ${className} ${type}`}>{children}</button>;
+  const { children, className, buttonType, type } = props;
+  return (
+    <button className={`button ${className} ${buttonType}`} type={type}>
+      {children}
+    </button>
+  );
 };
 
 Button.defaultProps = {

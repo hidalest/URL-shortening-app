@@ -19,8 +19,8 @@ const MainNav = () => {
         </div>
 
         <div className=''>
-          <Button type='secondary'>Login</Button>
-          <Button type='primary'>Sign Up</Button>
+          <Button buttonType='secondary'>Login</Button>
+          <Button buttonType='primary'>Sign Up</Button>
         </div>
       </nav>
 
@@ -43,8 +43,8 @@ const MainNav = () => {
           </div>
           <span className='nav__mobile-content-line' />
           <div className='nav__mobile-group'>
-            <Button type='secondary'>Login</Button>
-            <Button type='primary'>Sign Up</Button>
+            <Button buttonType='secondary'>Login</Button>
+            <Button buttonType='primary'>Sign Up</Button>
           </div>
         </div>
       </nav>
