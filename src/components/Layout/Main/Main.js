@@ -15,23 +15,33 @@ const Main = (props) => {
   useEffect(() => {
     if (!userLink) return;
 
-    console.log(userLink);
-
     setIsLoading(true);
     fetch(`https://api.shrtco.de/v2/shorten?url=${userLink}`)
       .then((result) => result.json())
       .then((response) => {
+        const { short_link, original_link } = response.result;
         setIsLoading(false);
         setErrorAPI(false);
         if (!response.ok)
           throw new Error(`${response.error}, ${response.error_code}`);
-        console.log(response);
+
+        const linkElement = {
+          shortLink: short_link,
+          originalLink: original_link,
+        };
+
+        setApiResult((prevState) => [...prevState, linkElement]);
       })
       .catch((error) => {
         setErrorAPI(true);
-        console.log(errorAPI);
       });
-  }, [userLink]);
+  }, [userLink, errorAPI]);
+
+  useEffect(() => {
+    if (apiResult.length >= 3) {
+      apiResult.shift();
+    }
+  }, [apiResult]);
 
   return (
     <main className='main'>
@@ -40,6 +50,10 @@ const Main = (props) => {
         isLoading={isLoading}
         error={errorAPI}
       />
+      {console.log(apiResult)}
+      {apiResult.map((element) => (
+        <p>{element.originalLink}</p>
+      ))}
     </main>
   );
 };
