@@ -5,4 +5,30 @@
   background-color: rgba($color: $darkViolet, $alpha: 0.2);
   height: 50rem;
   position: relative;
+
+  &__card-container {
+    background-color: red;
+    width: 70%;
+    height: 17rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    margin: 0 auto;
+    height: 5rem;
+    background-color: whitesmoke;
+
+    &-group {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
