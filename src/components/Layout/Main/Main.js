@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import InputLink from '../../InputLink/InputLink';
+import NewLink from '../../NewLink/NewLink';
 import Button from '../../UI/Button/Button';
 import Card from '../../UI/Card/Card';
-import Spinner from '../../UI/Spinner/Spinner';
 import './styles.scss';
 
 const Main = (props) => {
@@ -46,38 +46,21 @@ const Main = (props) => {
 
   return (
     <main className='main'>
-      <InputLink
-        getLink={getLinkHandler}
-        isLoading={isLoading}
-        error={errorAPI}
-      />
-      <div className='main__card-container'>
-        <Card className='main__card-link'>
-          <p>www.com</p>
-          <div className='main__card-link-group'>
-            <p>link transform</p>
-            <Button buttonType='primary'>Copy</Button>
-          </div>
-        </Card>
-        <Card className='main__card-link'>
-          <p>www.com</p>
-          <div className='main__card-link-group'>
-            <p>link transform</p>
-            <Button buttonType='primary'>Copy</Button>
-          </div>
-        </Card>
-        <Card className='main__card-link'>
-          <p>www.com</p>
-          <div className='main__card-link-group'>
-            <p>link transform</p>
-            <Button buttonType='primary'>Copy</Button>
-          </div>
-        </Card>
+      <div className='main__inputLink-container'>
+        <InputLink
+          getLink={getLinkHandler}
+          isLoading={isLoading}
+          error={errorAPI}
+        />
       </div>
-      {console.log(apiResult)}
-      {apiResult.map((element) => (
-        <p>{element.originalLink}</p>
-      ))}
+      <div className='main__card-container'>
+        {apiResult.map((element) => (
+          <NewLink
+            originalLink={element.originalLink}
+            shortLink={element.shortLink}
+          />
+        ))}
+      </div>
     </main>
   );
 };

@@ -6,14 +6,22 @@
   height: 50rem;
   position: relative;
 
+  &__inputLink-container {
+    height: 6rem;
+    position: relative;
+  }
+
   &__card-container {
-    background-color: red;
     width: 70%;
     height: 17rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__card-link {
@@ -25,10 +33,17 @@
     margin: 0 auto;
     height: 5rem;
     background-color: whitesmoke;
+    font-size: 1.2rem;
 
     &-group {
       display: flex;
       align-items: center;
+
+      p {
+        padding-right: 1.5rem;
+        color: $cyan;
+        font-size: 1.2rem;
+      }
     }
   }
 }
