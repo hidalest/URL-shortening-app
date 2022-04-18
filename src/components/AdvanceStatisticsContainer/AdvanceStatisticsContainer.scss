@@ -1,0 +1,21 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.statistics {
+  margin: 2rem 6rem;
+
+  &__header {
+    margin: 0 auto;
+    text-align: center;
+    width: 50rem;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $grayishViolet;
+    }
+  }
+}
