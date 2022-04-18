@@ -72,6 +72,11 @@
 
     input {
       border: 2px solid $red;
+
+      &::placeholder {
+        color: $red;
+        font-weight: 600;
+      }
     }
   }
 

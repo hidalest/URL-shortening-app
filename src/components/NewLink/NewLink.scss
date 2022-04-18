@@ -1,0 +1,14 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/mixins';
+
+.main__card-link {
+  button {
+    &.active-button {
+      background-color: $veryDarkBlue;
+      color: whitesmoke;
+      pointer-events: none;
+    }
+
+    border-radius: 5px;
+  }
+}

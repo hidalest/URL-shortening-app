@@ -5,23 +5,31 @@ import Button from '../UI/Button/Button';
 
 const NewLink = (props) => {
   const { originalLink, shortLink } = props;
-  const { btnText, setButtonText } = useState('Copy');
+  const [buttonText, setButtonText] = useState(false);
 
   const clickCopyClickboard = (props) => {
-    setButtonText('Copied!');
+    setButtonText(true);
+    navigator.clipboard.writeText(shortLink);
+
+    setTimeout(() => {
+      setButtonText(false);
+    }, 1000);
   };
 
-  const buttonText = 'Copy';
+  const addCopiedClass = buttonText ? 'active-button' : '';
+  const btnText = buttonText ? 'Copied!' : 'Copy';
 
-  console.log(btnText);
   return (
     <Card className='main__card-link'>
-      <p>{originalLink}</p>
+      <p className='main__card-link-original'>{originalLink}</p>
       <div className='main__card-link-group'>
         <p>{shortLink}</p>
-        <Button buttonType='primary' onClick={clickCopyClickboard}>
-          {/* {btnText} */}
-          {buttonText}
+        <Button
+          buttonType='primary'
+          onClick={clickCopyClickboard}
+          className={addCopiedClass}
+        >
+          {btnText}
         </Button>
       </div>
     </Card>
