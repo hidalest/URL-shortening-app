@@ -1,5 +1,9 @@
 import React from 'react';
 import './AdvanceStatisticsContainer.scss';
+import StatisticsCard from './StatisticsCard';
+import brandRecognition from '../../images/icon-brand-recognition.svg';
+import iconDetailedRecords from '../../images/icon-detailed-records.svg';
+import iconFullyCustomizable from '../../images/icon-fully-customizable.svg';
 
 const AdvanceStatisticsContainer = (props) => {
   return (
@@ -12,7 +16,30 @@ const AdvanceStatisticsContainer = (props) => {
         </p>
       </div>
 
-      <div className='statistics__cards'></div>
+      <div className='statistics__cards'>
+        <div className='statistics__cards-connectionLine'></div>
+        <StatisticsCard
+          logo={brandRecognition}
+          title='Brand Recognition'
+          description={`Boost your brand recognition with each click. Generic links don't mean a
+        thing. Branded links help instill confidence in your content`}
+          className='statistics__cards-1'
+        />
+        <StatisticsCard
+          logo={iconDetailedRecords}
+          title='Brand Recognition'
+          description={`Boost your brand recognition with each click. Generic links don't mean a
+        thing. Branded links help instill confidence in your content`}
+          className='statistics__cards-2'
+        />
+        <StatisticsCard
+          logo={iconFullyCustomizable}
+          title='Brand Recognition'
+          description={`Boost your brand recognition with each click. Generic links don't mean a
+        thing. Branded links help instill confidence in your content`}
+          className='statistics__cards-3'
+        />
+      </div>
     </section>
   );
 };

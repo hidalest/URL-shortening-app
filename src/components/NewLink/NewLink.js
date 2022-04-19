@@ -23,7 +23,7 @@ const NewLink = (props) => {
     <Card className='main__card-link'>
       <p className='main__card-link-original'>{originalLink}</p>
       <div className='main__card-link-group'>
-        <p>{shortLink}</p>
+        <p className='short-link'>{shortLink}</p>
         <Button
           buttonType='primary'
           onClick={clickCopyClickboard}

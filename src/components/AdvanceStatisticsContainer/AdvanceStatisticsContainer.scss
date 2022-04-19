@@ -2,9 +2,18 @@
 @import '../../sassStyles/variables';
 
 .statistics {
-  margin: 2rem 6rem;
+  margin: 8rem 6rem;
+  position: relative;
+  padding-bottom: 8rem;
+  @include responsiveMax($table-land) {
+    margin: 8rem auto;
+    width: 90%;
+  }
 
   &__header {
+    @include responsiveMax($table-land) {
+      width: 90%;
+    }
     margin: 0 auto;
     text-align: center;
     width: 50rem;
@@ -17,5 +26,52 @@
     p {
       color: $grayishViolet;
     }
+  }
+
+  &__cards {
+    @include responsiveMin($table-land) {
+      &-1 {
+        align-self: flex-start;
+      }
+      &-2 {
+        align-self: center;
+      }
+      &-3 {
+        align-self: flex-end;
+      }
+
+      & > *:not(:last-child) {
+        margin-right: 3rem;
+        margin-bottom: 0;
+      }
+    }
+
+    @include responsiveMax($table-land) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      & > *:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+    }
+
+    &-connectionLine {
+      @include responsiveMax($table-land) {
+        transform: rotate(90deg);
+        top: 55%;
+      }
+      width: 1rem;
+      height: 0.5rem;
+      position: absolute;
+      background-color: $cyan;
+      top: 55%;
+      width: 50rem;
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 25rem;
+    margin-top: 8rem;
   }
 }

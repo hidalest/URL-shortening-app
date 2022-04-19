@@ -35,6 +35,7 @@ const Main = (props) => {
         setApiResult((prevState) => [...prevState, linkElement]);
       })
       .catch((error) => {
+        setIsLoading(false);
         setErrorAPI(true);
       });
   }, [userLink, errorAPI]);
