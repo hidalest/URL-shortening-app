@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AdvanceStatisticsContainer from '../../AdvanceStatisticsContainer/AdvanceStatisticsContainer';
 import InputLink from '../../InputLink/InputLink';
 import NewLink from '../../NewLink/NewLink';
 import Button from '../../UI/Button/Button';
@@ -34,6 +35,7 @@ const Main = (props) => {
         setApiResult((prevState) => [...prevState, linkElement]);
       })
       .catch((error) => {
+        setIsLoading(false);
         setErrorAPI(true);
       });
   }, [userLink, errorAPI]);
@@ -61,6 +63,8 @@ const Main = (props) => {
           />
         ))}
       </div>
+
+      <AdvanceStatisticsContainer />
     </main>
   );
 };
