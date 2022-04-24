@@ -7,8 +7,8 @@ import iconFullyCustomizable from '../../images/icon-fully-customizable.svg';
 
 const AdvanceStatisticsContainer = (props) => {
   return (
-    <section className='statistics'>
-      <div className='statistics__header'>
+    <section className="statistics">
+      <div className="statistics__header">
         <h2>Advanced Statistics</h2>
         <p>
           Track how your links are performing across the web with our advanced
@@ -16,28 +16,26 @@ const AdvanceStatisticsContainer = (props) => {
         </p>
       </div>
 
-      <div className='statistics__cards'>
-        <div className='statistics__cards-connectionLine'></div>
+      <div className="statistics__cards">
+        <div className="statistics__cards-connectionLine"></div>
         <StatisticsCard
-          logo={brandRecognition}
-          title='Brand Recognition'
+          logo={iconFullyCustomizable}
+          title="Brand Recognition"
           description={`Boost your brand recognition with each click. Generic links don't mean a
         thing. Branded links help instill confidence in your content`}
-          className='statistics__cards-1'
+          className="statistics__cards-1"
+        />
+        <StatisticsCard
+          logo={brandRecognition}
+          title="Detailed Records "
+          description={`Gain insight into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions`}
+          className="statistics__cards-2d"
         />
         <StatisticsCard
           logo={iconDetailedRecords}
-          title='Brand Recognition'
-          description={`Boost your brand recognition with each click. Generic links don't mean a
-        thing. Branded links help instill confidence in your content`}
-          className='statistics__cards-2'
-        />
-        <StatisticsCard
-          logo={iconFullyCustomizable}
-          title='Brand Recognition'
-          description={`Boost your brand recognition with each click. Generic links don't mean a
-        thing. Branded links help instill confidence in your content`}
-          className='statistics__cards-3'
+          title="Fully Customizable "
+          description={`Improved brand awareness and content discoverablity through customizable links, supercharging audience engagement.`}
+          className="statistics__cards-3"
         />
       </div>
     </section>

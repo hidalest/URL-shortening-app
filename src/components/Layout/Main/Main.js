@@ -70,7 +70,7 @@ const Main = () => {
         <h2>Boost Your Links Today</h2>
         <Button
           buttonType="primary"
-          onClick={() => window.location.replace('/#inputLink')}
+          onClick={() => window.location.replace('#inputLink')}
         >
           Get Started
         </Button>
