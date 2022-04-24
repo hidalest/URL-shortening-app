@@ -29,7 +29,7 @@ const AdvanceStatisticsContainer = (props) => {
           logo={brandRecognition}
           title="Detailed Records "
           description={`Gain insight into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions`}
-          className="statistics__cards-2d"
+          className="statistics__cards-2"
         />
         <StatisticsCard
           logo={iconDetailedRecords}
