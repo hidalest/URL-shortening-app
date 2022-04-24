@@ -99,4 +99,26 @@
       }
     }
   }
+
+  &__preFooter {
+    background: url('../../../images/bg-shorten-desktop.svg'), $darkViolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+
+    h2 {
+      color: whitesmoke;
+      font-size: 4rem;
+      padding-bottom: 2rem;
+      @include responsiveMax($table-land) {
+        font-size: 3rem;
+      }
+
+      @include responsiveMax($phone) {
+        font-size: 2rem;
+      }
+    }
+  }
 }

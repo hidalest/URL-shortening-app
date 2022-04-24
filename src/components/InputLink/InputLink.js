@@ -6,7 +6,7 @@ import './styles.scss';
 const InputLink = (props) => {
   const [activeForm, setIsActiveForm] = useState(true);
   const [inputValue, setInputValue] = useState('');
-  let { isLoading, getLink, error } = props;
+  let { isLoading, getLink, error, id } = props;
 
   const inputValueHandler = (value) => {
     setInputValue(value.target.value);
@@ -27,7 +27,7 @@ const InputLink = (props) => {
   };
   return (
     <>
-      <form className='form' onSubmit={onFormSubmitHandler}>
+      <form className='form' onSubmit={onFormSubmitHandler} id={id}>
         <div className={`form__group ${applyErrorClass ? 'form__alert' : ''}`}>
           <input
             type='text'

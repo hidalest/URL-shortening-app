@@ -3,10 +3,9 @@ import AdvanceStatisticsContainer from '../../AdvanceStatisticsContainer/Advance
 import InputLink from '../../InputLink/InputLink';
 import NewLink from '../../NewLink/NewLink';
 import Button from '../../UI/Button/Button';
-import Card from '../../UI/Card/Card';
 import './styles.scss';
 
-const Main = (props) => {
+const Main = () => {
   const [errorAPI, setErrorAPI] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [apiResult, setApiResult] = useState([]);
@@ -34,7 +33,7 @@ const Main = (props) => {
 
         setApiResult((prevState) => [...prevState, linkElement]);
       })
-      .catch((error) => {
+      .catch(() => {
         setIsLoading(false);
         setErrorAPI(true);
       });
@@ -47,15 +46,16 @@ const Main = (props) => {
   }, [apiResult]);
 
   return (
-    <main className='main'>
-      <div className='main__inputLink-container'>
+    <main className="main">
+      <div className="main__inputLink-container">
         <InputLink
           getLink={getLinkHandler}
           isLoading={isLoading}
           error={errorAPI}
+          id={'inputLink'}
         />
       </div>
-      <div className='main__card-container'>
+      <div className="main__card-container">
         {apiResult.map((element) => (
           <NewLink
             originalLink={element.originalLink}
@@ -65,6 +65,16 @@ const Main = (props) => {
       </div>
 
       <AdvanceStatisticsContainer />
+
+      <div className="main__preFooter">
+        <h2>Boost Your Links Today</h2>
+        <Button
+          buttonType="primary"
+          onClick={() => window.location.replace('/#inputLink')}
+        >
+          Get Started
+        </Button>
+      </div>
     </main>
   );
 };
