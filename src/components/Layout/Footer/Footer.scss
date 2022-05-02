@@ -1,0 +1,60 @@
+@import "../../../sassStyles/mixins";
+@import "../../../sassStyles/variables";
+
+.footer {
+  @include responsiveMax($table-land) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  background-color: $veryDarkViolet;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+
+  &-logo img {
+    filter: invert(96%) sepia(96%) saturate(4%) hue-rotate(141deg)
+      brightness(103%) contrast(100%); // Change SVG color
+  }
+
+  &-links {
+    @include responsiveMax($table-land) {
+      padding: 2rem 0;
+    }
+    @include responsiveMax($table) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+
+    &-column {
+    @include responsiveMax($table) {
+      padding-top: 2rem;
+    }
+      display: flex;
+      flex-direction: column;
+      padding-right: 1rem;
+      // width: 40%;
+      h2 {
+        color: whitesmoke;
+        padding-bottom: 1rem;
+      }
+      a {
+        color: whitesmoke;
+        text-decoration: none;
+        padding-top: 1rem;
+      }
+    }
+  }
+
+    &-socials{
+        & img {
+          padding-right: 1rem;
+        }
+    }
+}
