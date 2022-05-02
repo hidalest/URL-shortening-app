@@ -5,7 +5,7 @@ import brandRecognition from '../../images/icon-brand-recognition.svg';
 import iconDetailedRecords from '../../images/icon-detailed-records.svg';
 import iconFullyCustomizable from '../../images/icon-fully-customizable.svg';
 
-const AdvanceStatisticsContainer = (props) => {
+const AdvanceStatisticsContainer = () => {
   return (
     <section className="statistics">
       <div className="statistics__header">
