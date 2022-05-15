@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/URL-shortening-app/static/css/main.a0e8cd1b.css",
-    "main.js": "/URL-shortening-app/static/js/main.47831986.js",
+    "main.css": "/URL-shortening-app/static/css/main.fdc575a3.css",
+    "main.js": "/URL-shortening-app/static/js/main.1ff3dc50.js",
     "static/media/illustration-working.svg": "/URL-shortening-app/static/media/illustration-working.c9b5ef5452363d8be3df709375d50bd0.svg",
     "static/media/logo.svg": "/URL-shortening-app/static/media/logo.834643034343520f3b4d7e43111ed4d8.svg",
     "static/media/icon-fully-customizable.svg": "/URL-shortening-app/static/media/icon-fully-customizable.a1532a74fa781f6fde327313bd5ffce3.svg",
     "static/media/icon-brand-recognition.svg": "/URL-shortening-app/static/media/icon-brand-recognition.c349d3b69f7442e5ac3552e4138e72e7.svg",
     "static/media/icon-detailed-records.svg": "/URL-shortening-app/static/media/icon-detailed-records.265c8aea77b546e08ba3575f6a8a9f70.svg",
+    "static/media/icon-instagram.svg": "/URL-shortening-app/static/media/icon-instagram.df5873287e1c06a0fe74440f6ccd8394.svg",
+    "static/media/icon-pinterest.svg": "/URL-shortening-app/static/media/icon-pinterest.a2d25ab4c70b78c4028f25323009cc58.svg",
     "index.html": "/URL-shortening-app/index.html",
     "static/media/bg-shorten-desktop.svg": "/URL-shortening-app/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b.svg",
-    "main.a0e8cd1b.css.map": "/URL-shortening-app/static/css/main.a0e8cd1b.css.map",
-    "main.47831986.js.map": "/URL-shortening-app/static/js/main.47831986.js.map"
+    "static/media/icon-twitter.svg": "/URL-shortening-app/static/media/icon-twitter.1d5c6d5e6ab1717a500af2df0a87959a.svg",
+    "static/media/icon-facebook.svg": "/URL-shortening-app/static/media/icon-facebook.229c75a01827343aef31ae916e2ec18a.svg",
+    "main.fdc575a3.css.map": "/URL-shortening-app/static/css/main.fdc575a3.css.map",
+    "main.1ff3dc50.js.map": "/URL-shortening-app/static/js/main.1ff3dc50.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0e8cd1b.css",
-    "static/js/main.47831986.js"
+    "static/css/main.fdc575a3.css",
+    "static/js/main.1ff3dc50.js"
   ]
 }
