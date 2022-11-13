@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Front-end Mentor solution page](https://www.frontendmentor.io/solutions/responsive-url-shortening-app-rk6uLxJD5)
-- Live Site URL: [Live Site Here!](https://ehidalgo506-dev.github.io/URL-shortening-app/)
+- Live Site URL: [Live Site Here!](https://hidalest.github.io/URL-shortening-app/)
 
 ## My process
 
@@ -52,6 +52,6 @@ My process consisted on analyze everything before creating the app. To know whic
 
 ## Author
 
-- LinkedIn - [Esteban Hidalgo](https://www.linkedin.com/in/ehidalgo204/)
-- Frontend Mentor - [@ehidalgo506-dev](https://www.frontendmentor.io/profile/ehidalgo506-dev)
-- Github - [@ehidalgo506-dev](https://github.com/ehidalgo506-dev)
+- LinkedIn - [Esteban Hidalgo](https://www.linkedin.com/in/hidalest/)
+- Frontend Mentor - [@hidalest](https://www.frontendmentor.io/profile/hidalest)
+- Github - [@hidalest](https://github.com/hidalest)
